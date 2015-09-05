@@ -1,0 +1,62 @@
+/* CSS copyright Linus Lee, Polyx Studio */
+
+@media only screen and (min-width:1125px){
+    #cnt[data-msdualviewenabled="true"]>.mw{
+        -webkit-columns:2;
+        max-width:94%;
+    }
+    #cnt .g{
+        -webkit-column-break-inside:avoid;
+    }
+    ._Zfh + div{
+        display:none;
+    }
+}
+@media only screen and (max-width:1354px){
+    #cnt[data-msdualviewenabled="true"] #center_col{
+       margin-left:15px;
+    }
+}
+#cnt[data-msdualviewenabled="true"] #center_col{
+    padding-top:0;
+}
+#rhs_block>div{display:none}
+
+/* Magic Highlight Feature */ 
+[data-mshighlight~="stackx"] .rc>.r>[data-href*="stackoverflow.com"],
+[data-mshighlight~="stackx"] .rc>.r>[href*="stackoverflow.com"],
+[data-mshighlight~="stackx"] .rc>.r>[data-href*="serverfault.com"],
+[data-mshighlight~="stackx"] .rc>.r>[href*="serverfault.com"],
+[data-mshighlight~="stackx"] .rc>.r>[data-href*="superuser.com"],
+[data-mshighlight~="stackx"] .rc>.r>[href*="superuser.com"]{
+    background-color: #A54242;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 3px;
+    margin-top:3px;
+}
+[data-mshighlight~="wiki"] .rc>.r>[data-href*="wikipedia.org/wiki/"],
+[data-mshighlight~="wiki"] .rc>.r>[href*="wikipedia.org/wiki/"]{
+    background-color: #68a9ef;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 3px;
+    margin-top:3px;
+}
+[data-mshighlight~="edux"] .rc>.r>[data-href*=".edu/"],.rc>.r>[href*=".edu/"],
+[data-mshighlight~="edux"] .rc>.r>[data-href*=".edu."],.rc>.r>[href*=".edu."],
+[data-mshighlight~="edux"] .rc>.r>[data-href*=".gov/"],.rc>.r>[href*=".gov/"],
+[data-mshighlight~="edux"] .rc>.r>[data-href*=".ac."],.rc>.r>[href*=".ac."]{
+    background-color: #555;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 3px;
+}
+
+

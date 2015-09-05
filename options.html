@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Magic Search Options</title>
+    <style>
+      body{
+      padding:15px;
+      font-family:sans-serif;
+      }
+      h1{
+      font-size:1.2em;
+      font-weight:bold;
+      margin-bottom:10px;
+      margin-top:20px;
+      }
+      h1:first-child{
+      margin-top:0;
+      }
+      p{
+      margin-bottom:15px;
+      }
+      #submitter{
+      background-color:#222;
+      float:right;
+      width:100px;
+      margin:15px 0 15px 0;
+      border-radius:6px;
+      color:white;
+      text-align:center;
+      padding:10px;
+      cursor:pointer;
+      font-size:1.2em;
+      font-weight:bold;
+      transition:background-color 0.3s;
+      }
+      #submitter:hover{
+      background-color:#aaa;
+      }
+      h2{
+      clear:both;
+      font-size:1em;
+      font-weight:bold;
+      }
+      input[type='checkbox']{
+      margin-right:10px;
+      margin-bottom:8px;
+      }
+      #sh_inner{margin-left:20px};
+    </style>
+  </head>
+  <body>
+    <h1>DualView Options</h1>
+    <input type="checkbox" id="dv-enable"/>Enable DualView (2-column search results)
+    <h1>QuickSearch Options</h1>
+    <input type="checkbox" id="qs-enable"/>Enable QuickSearch
+    <!-- show how to use -->
+    <p>Want QuickSearch integration with another website you don't see here? <a href="https://chrome.google.com/webstore/detail/magic-search-supercharge/bodbpjecgkffnpfoncfdlmamheknmfjf" target="_blank">Contact Us</a>!</p>
+    <h1>Search Highlight</h1>
+    <input type="checkbox" id="sh-enable"/>Enable Search Highlight (highlight specific sites in results)
+    <div id="sh_inner">
+      <h2>Enable:</h2>
+      <input type="checkbox" id="sh-wiki"/>Wikipedia<br>
+      <input type="checkbox" id="sh-govedu"/>.EDU and .GOV Websites<br>
+      <input type="checkbox" id="sh-stack"/>Stack Overflow / SuperUser / Server Fault<br>
+      <!-- customizeabiliity -->
+    </div>
+    <div id="submitter">SAVE</div>
+    <script src="options.js"></script>
+  </body>
+</html>
