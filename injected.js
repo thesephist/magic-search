@@ -1,3 +1,4 @@
+// pulling in local settings
 var dv_e, sh_e, qs_e, sh_content;
 chrome.storage.sync.get({
     dv:true,
@@ -12,6 +13,7 @@ chrome.storage.sync.get({
     ms_script();
 });
 
+// main loop
 function ms_script(){
     typeHash = {
         "img": "&tbm=isch",
@@ -37,6 +39,7 @@ function ms_script(){
         "quote": "_bq"
     }
     
+    // navigating to target websites
     function goToYT(query_string){window.location.href="https://www.youtube.com/results?search_query="+query_string;}
     function goToSch(query_string){window.location.href="https://scholar.google.com/scholar?q="+query_string;}
     function goToWiki(query_string){window.location.href="https://en.wikipedia.org/w/index.php?search="+query_string;}
@@ -52,6 +55,7 @@ function ms_script(){
     
     var ms_url, rv_url, search_data, count, counterP;
     
+    // is there a QuickSearch query present?
     function queryPresent(){
         ms_url = window.location.href;
         rv_url = ms_url.split("").reverse().join("");
@@ -74,6 +78,7 @@ function ms_script(){
         return terml;
     }
     
+    // go to target with query
     function goToSearch(type,query){
         typeID = typeHash[type];
         
@@ -107,6 +112,7 @@ function ms_script(){
         }
     }
     
+    // check for query
     function mssync(){
         search_data = queryPresent();
         if(typeof(search_data)=="object"){
@@ -116,11 +122,13 @@ function ms_script(){
         }
     }
     
+    // when to check for query
     if(qs_e==true){
         mssync();
         window.addEventListener("hashchange",mssync);
     }
     
+    // when to enable dualview
     function dualview(){
         if(document.getElementById("rhs_block")!=null && document.getElementById("cnt")!=null){
             if(document.getElementById("rhs_block").children[1]!=undefined){
@@ -132,6 +140,7 @@ function ms_script(){
         document.getElementById('center_col').style.paddingTop=0;
     }
     
+    // activate dualview
     if(dv_e==true){
         document.addEventListener("DOMContentLoaded",function(){
             dualview();
@@ -142,6 +151,6 @@ function ms_script(){
         })
     }
     
+    // activate Search Highlight
     if(sh_e==true){document.addEventListener("DOMContentLoaded",function(){document.body.setAttribute("data-mshighlight",sh_content);})}
-    
 };
