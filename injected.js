@@ -3,7 +3,7 @@ var dv_e, sh_e, qs_e, sh_content;
 chrome.storage.sync.get({
     dv:true,
     sh:true,
-    qs:true,
+    qs:false,
     shc: "stackx wiki edux"
 },function(record){
     dv_e = record.dv;
@@ -73,15 +73,18 @@ function ms_script(){
         if(terml.length==1){
             terml = term.split("%3A");
         }
-        
-        if(terml.length!=2){return false}
+
+        if(terml.length<2){return false}
+        if(terml.length>2){
+            terml =  [terml[0], terml.splice(1).join(":")]
+        }
+        terml[0] = terml[0].toLowerCase();
         return terml;
     }
     
     // go to target with query
     function goToSearch(type,query){
         typeID = typeHash[type];
-        
         if(typeID==undefined){return null}
         else if(typeID[0]=="&"){
             goToKey(query,typeID);
