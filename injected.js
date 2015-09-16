@@ -75,7 +75,7 @@ function ms_script(){
         }
 
         if(terml.length<2){return false}
-        terml =  [terml[0], terml.splice(1).join(":")]
+        terml =  [terml[0], terml.splice(1).join(":")];
         terml[0] = terml[0].toLowerCase();
         return terml;
     }
