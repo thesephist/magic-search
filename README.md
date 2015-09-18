@@ -9,8 +9,8 @@ Each feature can be individually enabled under the options menu.
 Dual View tweaks the default desktop Google Search results page to display the 10-link list in two columns, dramatically taking more advantage of the available screen real estate. When reaosnable, Dual View also reduces margins and executes minor layout tweaks to preserve visual integrity with Dual View. 
 
 ### Exceptions
-* Dual View is responsive. On unreasonably small screensizes Dual View does not activate
-* On pages with Google's arguably more useful Knowledge Graph cards, Dual View disables itself
+* Dual View is responsive. On unreasonably small screen sizes Dual View does not activate.
+* On pages with Google's arguably more useful Knowledge Graph cards, Dual View disables itself.
 
 ## QuickSearch
 
@@ -60,5 +60,5 @@ Magic Search is also distributed at no cost on the Chrome Web Store.
 
 - - - -
 
-* Auto-detected languages to your native; specifying language coming in development
+\* Auto-detected languages to your native; specifying language coming in development
 
