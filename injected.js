@@ -3,7 +3,7 @@ var dv_e, sh_e, qs_e, sh_content;
 chrome.storage.sync.get({
     dv:true,
     sh:true,
-    qs:false,
+    qs:true,
     shc: "stackx wiki edux"
 },function(record){
     dv_e = record.dv;
@@ -76,7 +76,7 @@ function ms_script(){
 
         if(terml.length<2){return false}
         terml =  [terml[0], terml.splice(1).join(":")];
-        terml[0] = terml[0].toLowerCase();
+        terml[0] = terml[0].toLowerCase().split("+").join("");
         return terml;
     }
     

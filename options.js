@@ -50,5 +50,9 @@ function showSaved(){
     }, 1200);
 }
 
+document.getElementById("whatsthis").addEventListener("click",function(){
+    save();
+    window.location.href="qs.html";
+});
 document.addEventListener('DOMContentLoaded', restore);
 button.addEventListener('click', save);
