@@ -11,6 +11,7 @@
     ._Zfh + div{
         display:none;
     }
+    .mw{padding-bottom:20px}
 }
 @media only screen and (max-width:1354px){
     #cnt[data-msdualviewenabled="true"] #center_col{
