@@ -36,7 +36,8 @@ function ms_script(){
         "flickr": "_flickr",
         "wa": "_wa",
         "quotes": "_bq",
-        "quote": "_bq"
+        "quote": "_bq",
+        "urban": "_ub"
     }
     
     // navigating to target websites
@@ -52,7 +53,8 @@ function ms_script(){
     function goToWa(query_string){window.location.href="http://www.wolframalpha.com/input/?i="+query_string}
     function goToFl(query_string){window.location.href="https://www.flickr.com/search/?text="+query_string}
     function goToBq(query_string){window.location.href="http://www.brainyquote.com/search_results.html?q="+query_string}
-    
+    function goToUb(query_string){window.location.href="http://www.urbandictionary.com/define.php?term="+query_string}
+
     var ms_url, rv_url, search_data, count, counterP;
     
     // is there a QuickSearch query present?
@@ -109,6 +111,8 @@ function ms_script(){
                 goToFl(query);
             }else if(typeID=="_bq"){
                 goToBq(query);
+            }else if(typeID=="_ub"){
+                goToUb(query);
             }
         }
     }
