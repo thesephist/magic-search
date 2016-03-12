@@ -37,7 +37,8 @@ function ms_script(){
         "wa": "_wa",
         "quotes": "_bq",
         "quote": "_bq",
-        "urban": "_ub"
+        "urban": "_ub",
+        "lucky": "_lucky"
     }
     
     // navigating to target websites
@@ -54,7 +55,7 @@ function ms_script(){
     function goToFl(query_string){window.location.href="https://www.flickr.com/search/?text="+query_string}
     function goToBq(query_string){window.location.href="http://www.brainyquote.com/search_results.html?q="+query_string}
     function goToUb(query_string){window.location.href="http://www.urbandictionary.com/define.php?term="+query_string}
-
+    function goToIFL(query_string){window.location.href="http://www.google.com/search?btnI=&q="+query_string}
     var ms_url, rv_url, search_data, count, counterP;
     
     // is there a QuickSearch query present?
@@ -113,6 +114,8 @@ function ms_script(){
                 goToBq(query);
             }else if(typeID=="_ub"){
                 goToUb(query);
+            }else if(typeID=="_lucky"){
+                goToIFL(query);
             }
         }
     }
