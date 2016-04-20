@@ -3,13 +3,13 @@
 
     "name": "Magic Search | Supercharge your Search",
     "description": "Supercharge your Googling Experience -- be faster, smarter with the best search engine.",
-    "version": "1.1.6",
+    "version": "1.2",
 
     "browser_action": {
       "default_icon": "plexor.png"
     },
 
-    "author": "Polyx Studio",
+    "author": "Linus Lee",
     "short_name": "Magic Search",
 
     "icons": {
@@ -25,7 +25,7 @@
 
     "content_scripts": [
         {
-            "matches": ["*://www.google.com/sear*"],
+            "matches": ["*://www.google.com/#.*q=", "*://www.google.com/sear*", "*://www.google.com/"],
             "css": ["px.css"],
             "js": ["injected.min.js"],
             "run_at": "document_start"
