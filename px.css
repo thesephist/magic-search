@@ -31,7 +31,7 @@
 [data-mshighlight~="stackx"] .rc>.r>[data-href*="superuser.com"],
 [data-mshighlight~="stackx"] .rc>.r>[href*="superuser.com"]{
     background-color: #A54242;
-    color: white;
+    color: white !important;
     padding: 5px;
     border-radius: 5px;
     display: block;
