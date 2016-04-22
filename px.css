@@ -23,6 +23,15 @@
 }
 #rhs_block>div{display:none}
 
+/* Image Zoom Feature */
+[data-mszoomenabled="true"] .rg_di{
+    transition:-webkit-transform 0.3s;
+}
+[data-mszoomenabled="true"] .rg_di:hover{
+    -webkit-transform: scale(1.8);
+    z-index:10;
+}
+
 /* Magic Highlight Feature */ 
 [data-mshighlight~="stackx"] .rc>.r>[data-href*="stackoverflow.com"],
 [data-mshighlight~="stackx"] .rc>.r>[href*="stackoverflow.com"],

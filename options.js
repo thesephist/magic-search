@@ -20,11 +20,13 @@ function restore(){
       dv: true,
       qs: true,
       sh: true,
+      zm: true,
       shc: "wiki stackx edux",
     }, function(record){
         e('dv-enable').checked = record.dv;
         e('qs-enable').checked = record.qs;
         e('sh-enable').checked = record.sh;
+        e('zm-enable').checked = record.zm;
         syncD(record.shc);
     });
 }
@@ -33,12 +35,14 @@ function save(){
     dv_enable=e('dv-enable').checked;
     qs_enable=e('qs-enable').checked;
     sh_enable=e('sh-enable').checked;
+    zm_enable=e('zm-enable').checked;
     sh_content=syncE();
 
     chrome.storage.sync.set({
         dv: dv_enable,
         qs: qs_enable,
         sh: sh_enable,
+        zm: zm_enable,
         shc: sh_content
     }, showSaved);
 }

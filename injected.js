@@ -4,11 +4,13 @@ chrome.storage.sync.get({
     dv:true, 
     sh:true, 
     qs:true, 
+    zm:true,
     shc: "stackx wiki edux"
 }, function(record){
     dv_e = record.dv;
     sh_e = record.sh;
     qs_e = record.qs;
+    zm_e = record.zm;
     sh_content = record.shc;
     ms_script();
 });
@@ -164,4 +166,8 @@ function ms_script(){
     
     // activate Search Highlight
     if(sh_e){document.addEventListener("DOMContentLoaded", function(){document.body.setAttribute("data-mshighlight", sh_content);})}
+
+    // activate Image Zoom
+    if(zm_e){document.addEventListener("DOMContentLoaded", function(){document.body.setAttribute("data-mszoomenabled", zm_e)})}
+
 };
